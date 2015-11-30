@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/ilyanadelyaev/.subversion'
+let g:netrw_dirhist_2='/home/ilyanadelyaev/.subversion/auth'
+let g:netrw_dirhist_3='/home/ilyanadelyaev/workspace/sandbox/sandbox-tasks/projects/TestTask'
+let g:netrw_dirhist_4='/home/ilyanadelyaev/workspace/sandbox/sandbox-tasks'
+let g:netrw_dirhist_5='/home/ilyanadelyaev/workspace/sandbox/runtime_data/tests/sandbox_test_2014-08-01_17-26-43_13440/tasks/0/2/20/log1'
+let g:netrw_dirhist_6='/home/ilyanadelyaev/workspace/sandbox/runtime_data/tests/sandbox_test_2014-08-01_17-26-43_13440/tasks/9/1/19/log1'
+let g:netrw_dirhist_7='/home/ilyanadelyaev/workspace/sandbox/runtime_data/logs'
+let g:netrw_dirhist_8='/home/ilyanadelyaev/workspace/sandbox/runtime_data/tests/sandbox_test_2014-08-12_12-52-59_20105/tasks-client'
