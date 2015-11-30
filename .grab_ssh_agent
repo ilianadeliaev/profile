@@ -1,0 +1,12 @@
+#!/bin/sh
+
+SSHVARS="SSH_CLIENT SSH_TTY SSH_AUTH_SOCK SSH_CONNECTION DISPLAY"
+
+for x in ${SSHVARS} ; do
+    (eval echo $x=\$$x) | sed  's/=/="/
+                               s/$/"/
+                               s/^/export /'
+done 1>$HOME/.local/bin/fix_ssh_agent
+
+chmod +x $HOME/.local/bin/fix_ssh_agent
+ln -sf $HOME/.local/bin/fix_ssh_agent $HOME/.fix_ssh_agent
