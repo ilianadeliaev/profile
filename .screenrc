@@ -1,0 +1,26 @@
+startup_message off
+defflow on
+defscrollback 20000
+autodetach on
+altscreen on
+
+#activity "Activity on %n"
+activity ""
+defmonitor on
+
+backtick 13 4 4 ${HOME}/.local/bin/sys_info.py cpu
+backtick 14 4 4 ${HOME}/.local/bin/sys_info.py pmem
+backtick 15 0 0 echo $__SCREEN_NAME
+
+caption always "%{= gk}%-Lw%{= kg}  %n%f %t  %{-}%+Lw %= %{= gk} %H (%15`) %{-}%{= ck} %13` %{-}%{= yk} %14` %{-}"
+
+shelltitle "$ |tab"
+
+bindkey ^[[2H prev
+bindkey ^[[2F next
+
+bindkey ^[OQ screen # F2
+bindkey ^[OR prev # F3
+bindkey ^[OS next # F4
+bindkey ^[[17~ detach # F6
+bindkey ^[[18~ copy #F7
