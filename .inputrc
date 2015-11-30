@@ -1,0 +1,6 @@
+"\e[2C": forward-word
+"\e[2D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
