@@ -136,6 +136,10 @@ set lazyredraw  " redraw only on type
 set undolevels=1000
 set history=200
 
+set fileencoding=utf-8
+set encoding=utf-8
+set termencoding=utf-8
+
 " =============== view =================== "
 set laststatus=2  " 1 = show status line only for multiply folds
 set showtabline=1  " 1 = show tab bar only if more than one window / 2 - show allways
@@ -179,9 +183,10 @@ augroup resCur
 augroup END
 
 " =============== over length ============ "
-highlight overlength ctermbg=red ctermfg=white
-match overlength /\%119v.\+/
-
+"highlight overlength ctermbg=red ctermfg=white
+"match overlength /\%79v.\+/
+"set colorcolumn=80
+"hi ColorColumn ctermbg=darkgrey
 
 
 
@@ -233,8 +238,8 @@ au BufEnter,BufRead *.py setlocal smartindent cinwords=if,elif,else,for,while,tr
 au BufRead *.py highligh BadWhitespace ctermbg=red guibg=red
 au BufRead *.py match BadWhitespace /^\t\+/
 au BufRead *.py match BadWhitespace /\s\+$/
-au BufRead *.py highlight overlength ctermbg=red ctermfg=white
-au BufRead *.py match overlength /\%119v.\+/
+au BufRead *.py highlight overlength ctermbg=darkgray ctermfg=white
+au BufRead *.py match overlength /\%80v.\+/
 "au BufWritePre *.py :%s/\s\+$//e
 
 
@@ -279,8 +284,13 @@ let g:Tb_MoreThanOne = 0
 let g:Tb_ForceDisplay = 1
 let g:Tb_SplitBelow = 0
 
-" =============== supertab ============== "
-"set completeopt=longest,menuone
+" =============== autocomplete ============== "
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 "set ofu=syntaxcomplete#Complete
 "autocmd FileType python set omnifunc=pythoncomplete#Complete
 
