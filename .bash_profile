@@ -124,7 +124,7 @@ if [ -n "$PS1" ]; then
     export LESS_TERMCAP_ue=$'\033[0m'
 
     _grepParams='-RHsn'
-    function G() { grep $_grepParams "$2" $1 | grep -v "\.svn" | grep -v "Binary file" | grep "$2" ; }
+    function G() { grep $_grepParams "$2" $1 | grep -v "\.git" | grep -v "Binary file" | grep "$2" ; }
     function grepFw() { grep $_grepParams -w "$1" $2 | grep -v "svn" | grep -v "Binary file" | grep "$2" ; }
     if [[ $platform == 'darwin' ]]; then
         alias psA="ps aux"
@@ -151,8 +151,8 @@ if [ -n "$PS1" ]; then
     alias tarU="tar -xzf"
     alias tarA="tar -cvzf"
 
-    alias D='svn di . |V'
-    alias S='svn st .'
+    alias D='git diff . |V'
+    alias S='git status .'
     alias U='svn up .'
 
     alias C='pycheck ./'
