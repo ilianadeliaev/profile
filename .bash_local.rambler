@@ -1,0 +1,10 @@
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+
+export NODE_PATH='/usr/local/lib/jsctags:${NODE_PATH}'
+
+
+alias _sh="__screen HIVE ${HOME}/.workspace/hive"
+
