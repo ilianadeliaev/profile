@@ -1,1 +1,4 @@
+export __CD_HOME_PATH="${HOME}/dev/rambler/cocrm/crm/"
+export LDAP_CONFIG="/home/nadelyaev/dev/rambler/cocrm/crm/ldap_config.yml"
+
 alias crm='__screen "CRM" "~/dev/rambler/cocrm/crm/"'
