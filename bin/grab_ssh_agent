@@ -6,6 +6,6 @@ for x in ${SSHVARS} ; do
     (eval echo $x=\$$x) | sed  's/=/="/
                                s/$/"/
                                s/^/export /'
-done 1>$HOME/.fix_ssh_agent
+done 1>~/.local/bin/_fix_ssh_agent
 
-chmod +x $HOME/.fix_ssh_agent
+chmod +x ~/.local/bin/_fix_ssh_agent

@@ -148,7 +148,7 @@ if [ -n "$PS1" ]; then
 
     # screen
 
-    alias fix_ssh_agent="source ~/.fix_ssh_agent"
+    alias fix_ssh_agent="source ~/.local/bin/_fix_ssh_agent"
 
     #export __CD_HOME_PATH="${HOME}"  # override on srceen creation
     function go() {
@@ -177,7 +177,7 @@ if [ -n "$PS1" ]; then
 
         cd
 
-        ~/.grab_ssh_agent
+        ~/.local/bin/grab_ssh_agent
 
         screen -xR "${__SCREEN_NAME}"
     }
