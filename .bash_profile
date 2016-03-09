@@ -156,6 +156,8 @@ if [ -n "$PS1" ]; then
         echo ${PWD}
     }
 
+    echo "go path: ${__CD_HOME_PATH}"
+
     function __screen() {
         __NAME=$1
         __HOME_PATH=$2
