@@ -1,3 +1,7 @@
+#! /usr/bin/env bash
+
+set -x
+
 mkdir ~/.local/
 mkdir ~/.local/bin
 
@@ -12,7 +16,7 @@ ln -sf ~/.local/.profile/.grab_ssh_agent ~/.grab_ssh_agent
 ln -sf ~/.local/.profile/.inputrc ~/.inputrc
 ln -sf ~/.local/.profile/.python_startup ~/.python_startup
 ln -sf ~/.local/.profile/.screenrc ~/.screenrc
-ln -sf ~/.local/.profile/.vim/ ~/.vim/
+ln -sf ~/.local/.profile/.vim/ ~/.vim
 ln -sf ~/.local/.profile/.vimrc ~/.vimrc
 
-ln -sf ~/.local/.profile/bin/add_rsa_keys ~/.local/bin/add_rsa_keys
+#ln -sf ~/.local/.profile/bin/add_rsa_keys ~/.local/bin/add_rsa_keys
