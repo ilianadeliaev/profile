@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/personal_github_rsa
+ssh-add ~/.ssh/rambler_gitlab_rsa
+ssh-add ~/.ssh/rambler_ssh_rsa
