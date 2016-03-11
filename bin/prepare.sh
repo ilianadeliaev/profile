@@ -2,6 +2,8 @@
 
 set -x
 
+rm -rf ~/.local/.profile
+
 mkdir ~/.local/
 mkdir ~/.local/bin
 
