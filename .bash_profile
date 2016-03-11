@@ -153,7 +153,7 @@ if [ -n "$PS1" ]; then
     alias ed='vim'
 
 
-    # screen
+    # tmux
 
     alias fix_ssh_agent="source ~/.local/bin/_fix_ssh_agent"
 
@@ -165,7 +165,7 @@ if [ -n "$PS1" ]; then
 
     echo "go path: ${__CD_HOME_PATH}"
 
-    function __screen() {
+    function __tmux() {
         __NAME=$1
         __HOME_PATH=$2
         if [ -z ${__NAME} ]; then
@@ -174,10 +174,10 @@ if [ -n "$PS1" ]; then
         if [ -z ${__HOME_PATH} ]; then
             __HOME_PATH="${HOME}"
         fi
-        echo "screen name: ${__NAME}"
+        echo "tmux name: ${__NAME}"
         echo "go path: ${__HOME_PATH}"
 
-        export __SCREEN_NAME=${__NAME}
+        export __TMUX_NAME=${__NAME}
         unset __NAME
 
         unset __CD_HOME_PATH
@@ -188,7 +188,7 @@ if [ -n "$PS1" ]; then
 
         ~/.local/bin/grab_ssh_agent
 
-        screen -xR "${__SCREEN_NAME}"
+        tmux -2u attach || tmux -2u new
     }
 
 
