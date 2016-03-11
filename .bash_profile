@@ -64,7 +64,7 @@ if [ -n "$PS1" ]; then
     if [[ -z "${TMUX_PANE}" ]]; then
         PS_PREFIX=
     else
-        PS_PREFIX="${TMUX_PANE}: "
+        PS_PREFIX="\[\033[0;36m\]${TMUX_PANE}\[\033[0m\] "
     fi
     echo '${PS_PREFIX}';
 
