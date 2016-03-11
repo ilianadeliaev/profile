@@ -15,6 +15,7 @@ ln -sf ~/.local/.profile/.git-completion.bash ~/.git-completion.bash
 ln -sf ~/.local/.profile/.inputrc ~/.inputrc
 ln -sf ~/.local/.profile/.python_startup ~/.python_startup
 ln -sf ~/.local/.profile/.screenrc ~/.screenrc
+ln -sf ~/.local/.profile/.tmux.conf ~/.tmux.conf
 ln -sf ~/.local/.profile/.vim/ ~/.vim
 ln -sf ~/.local/.profile/.vimrc ~/.vimrc
 

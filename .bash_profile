@@ -61,18 +61,25 @@ if [ -n "$PS1" ]; then
 
     stty stop ''
 
-    CURRENT_TIME="\[\033[0;36m\][\T]\[\033[0m\]"
-    HOST_NAME="\[\033[0;36m\]\h\[\033[0m\]"
-    USER_NAME="\[\033[0;32m\]\u\[\033[0m\]"
-    ROOT_NAME="\[\033[1;31m\]\u\[\033[0m\]"
-    CURRENT_FOLDER="\W"
-    TERM_SIGN="\[\033[0;36m\]$\[\033[0m\]"
-    if [[ ${EUID} -ne 0 && $(whoami) != "root" ]]; then
-        #export PS1="${HOST_NAME}@${USER_NAME}:${CURRENT_FOLDER}${TERM_SIGN} "
-        #export PS1="${HOST_NAME}:${CURRENT_FOLDER}${TERM_SIGN} "
-        export PS1="${CURRENT_TIME} ${HOST_NAME}:${CURRENT_FOLDER}${TERM_SIGN} "
+    if [[ -z "${TMUX_PANE}" ]]; then
+        PS_PREFIX=
     else
-        export PS1="${HOST_NAME}@${ROOT_NAME}:${CURRENT_FOLDER}${TERM_SIGN} "
+        PS_PREFIX="${TMUX_PANE}: "
+    fi
+    echo '${PS_PREFIX}';
+
+    PS_CURRENT_TIME="\[\033[0;36m\][\T]\[\033[0m\]"
+    PS_HOST_NAME="\[\033[0;36m\]\h\[\033[0m\]"
+    PS_USER_NAME="\[\033[0;32m\]\u\[\033[0m\]"
+    PS_ROOT_NAME="\[\033[1;31m\]\u\[\033[0m\]"
+    PS_CURRENT_FOLDER="\W"
+    PS_TERM_SIGN="\[\033[0;36m\]$\[\033[0m\]"
+    if [[ ${EUID} -ne 0 && $(whoami) != "root" ]]; then
+        #export PS1="${PS_HOST_NAME}@${PS_USER_NAME}:${PS_CURRENT_FOLDER}${PS_TERM_SIGN} "
+        #export PS1="${PS_HOST_NAME}:${PS_CURRENT_FOLDER}${PS_TERM_SIGN} "
+        export PS1="${PS_PREFIX}${PS_CURRENT_TIME} ${PS_HOST_NAME}:${PS_CURRENT_FOLDER}${PS_TERM_SIGN} "
+    else
+        export PS1="${PS_HOST_NAME}@${PS_ROOT_NAME}:${PS_CURRENT_FOLDER}${PS_TERM_SIGN} "
     fi
 
 
