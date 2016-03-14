@@ -157,6 +157,12 @@ if [ -n "$PS1" ]; then
 
     alias fix_ssh_agent="source ~/.local/bin/_fix_ssh_agent"
 
+    if [[ -z "${TMUX_PANE}" ]]; then
+        echo
+    else
+        fix_ssh_agent
+    fi
+
     #export __CD_HOME_PATH="${HOME}"  # override on srceen creation
     function go() {
         cd ${__CD_HOME_PATH}
