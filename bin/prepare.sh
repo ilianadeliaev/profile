@@ -7,7 +7,7 @@ rm -rf ~/.local/.profile
 mkdir ~/.local/
 mkdir ~/.local/bin
 
-git clone https://github.com/ilyanadelyaev/_profile.git ~/.local/.profile
+git clone https://github.com/ilyanadelyaev/profile.git ~/.local/.profile
 rm -rf ~/.local/.profile/.git
 
 ln -sf ~/.local/.profile/.bash_local.rambler ~/.bash_local
