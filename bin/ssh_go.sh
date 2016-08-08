@@ -142,4 +142,4 @@ fi
 
 echo 'GO to' $server
 
-ssh nadelyaev@${server}
+ssh -A nadelyaev@${server}
