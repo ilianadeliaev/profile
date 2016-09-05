@@ -6,34 +6,29 @@ MY=(
 )
 
 DEV=(
-    'api.dev.crm.rambler-co.ru'
-    'queue.dev.crm.rambler-co.ru'
-    'dev.crm.rambler-co.ru'
-    'subscriptions.dev.crm.rambler.ru'
-    'storage.dev.crm.rambler-co.ru'
-    'db.dev.crm.rambler-co.ru'
-    'cache.dev.crm.rambler-co.ru'
+    'back01.dev.crm.rambler-co.ru'
+    'queue01.dev.crm.rambler-co.ru'
+    'front01.dev.crm.rambler-co.ru'
+    'subs01.dev.crm.rambler-co.ru'
+    'storage01.dev.crm.rambler-co.ru'
     'stat.dev.crm.rambler-co.ru'
 )
 
 STAGE=(
-    'api.stage.crm.rambler-co.ru'
-    'queue.stage.crm.rambler-co.ru'
-    'stage.crm.rambler-co.ru'
-    'subscriptions.stage.crm.rambler.ru'
-    'storage.stage.crm.rambler-co.ru'
-    'db.stage.crm.rambler-co.ru'
-    'cache.stage.crm.rambler-co.ru'
+    'back01.stage.crm.rambler-co.ru'
+    'queue01.stage.crm.rambler-co.ru'
+    'front01.stage.crm.rambler-co.ru'
+    'subs01.stage.crm.rambler-co.ru'
+    'storage01.stage.crm.rambler-co.ru'
+    'stat.stage.crm.rambler-co.ru'
 )
 
 PROD=(
-    'api.crm.rambler-co.ru'
-    'queue.crm.rambler-co.ru'
-    'crm.rambler-co.ru'
-    'subscriptions.crm.rambler.ru'
-    'storage.crm.rambler-co.ru'
-    'db.crm.rambler-co.ru'
-    'cache.crm.rambler-co.ru'
+    'back01.crm.rambler-co.ru'
+    'queue01.crm.rambler-co.ru'
+    'front01.crm.rambler-co.ru'
+    'subs01.crm.rambler-co.ru'
+    'storage01.crm.rambler-co.ru'
     'stat.crm.rambler-co.ru'
 )
 
@@ -43,8 +38,6 @@ QA=(
     'qa.crm.rambler-co.ru'
     'subscriptions.qa.crm.rambler.ru'
     'storage.qa.crm.rambler-co.ru'
-    'db.qa.crm.rambler-co.ru'
-    'cache.qa.crm.rambler-co.ru'
     'stat.qa.crm.rambler-co.ru'
 )
 
@@ -122,7 +115,7 @@ fi
 # PROD
 if (( $choice >= 30 && $choice <= 39 )); then
     ((choice = choice - 30))
-    sever=${PROD[${choice}]}
+    server=${PROD[${choice}]}
 fi
 
 # QA
