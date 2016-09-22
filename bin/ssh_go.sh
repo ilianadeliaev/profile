@@ -11,7 +11,6 @@ DEV=(
     'front01.dev.crm.rambler-co.ru'
     'subs01.dev.crm.rambler-co.ru'
     'storage01.dev.crm.rambler-co.ru'
-    'stat.dev.crm.rambler-co.ru'
 )
 
 STAGE=(
@@ -20,29 +19,33 @@ STAGE=(
     'front01.stage.crm.rambler-co.ru'
     'subs01.stage.crm.rambler-co.ru'
     'storage01.stage.crm.rambler-co.ru'
-    'stat.stage.crm.rambler-co.ru'
 )
 
 PROD=(
     'back01.crm.rambler-co.ru'
+    'back02.crm.rambler-co.ru'
     'queue01.crm.rambler-co.ru'
+    'queue02.crm.rambler-co.ru'
     'front01.crm.rambler-co.ru'
+    'front02.crm.rambler-co.ru'
     'subs01.crm.rambler-co.ru'
+    'subs02.crm.rambler-co.ru'
     'storage01.crm.rambler-co.ru'
-    'stat.crm.rambler-co.ru'
+    'storage02.crm.rambler-co.ru'
 )
 
 QA=(
-    'api.qa.crm.rambler-co.ru'
-    'queue.qa.crm.rambler-co.ru'
-    'qa.crm.rambler-co.ru'
-    'subscriptions.qa.crm.rambler.ru'
-    'storage.qa.crm.rambler-co.ru'
-    'stat.qa.crm.rambler-co.ru'
+    'back01.dev.crm.rambler-co.ru'
+    'queue01.dev.crm.rambler-co.ru'
+    'front01.dev.crm.rambler-co.ru'
+    'subs01.dev.crm.rambler-co.ru'
+    'storage01.dev.crm.rambler-co.ru'
 )
 
 MISC=(
     'mailer.dev.crm.rambler-co.ru'
+    'repo.crm.rambler-co.ru'
+    'repo02.crm.rambler-co.ru'
 )
 
 
