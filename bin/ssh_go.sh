@@ -76,19 +76,19 @@ if [ -z "$1" ]; then
     echo '- QA -'
     for i in ${!QA[*]}
     do
-        printf "4%d: %s\n" $i ${QA[$i]}
+        printf "2%d: %s\n" $i ${QA[$i]}
     done
 
     echo '- STAGE -'
     for i in ${!STAGE[*]}
     do
-        printf "2%d: %s\n" $i ${STAGE[$i]}
+        printf "3%d: %s\n" $i ${STAGE[$i]}
     done
 
     echo '- PROD -'
     for i in ${!PROD[*]}
     do
-        printf "3%d: %s\n" $i ${PROD[$i]}
+        printf "4%d: %s\n" $i ${PROD[$i]}
     done
 
     echo '-- MISC --'
