@@ -114,7 +114,8 @@ map! <silent> <f12> <esc>:NERDTreeToggle<cr>
 " =============== interface ================= "
 map <silent> <c-n><c-n> :set invnumber<cr>
 map <silent> <c-l><c-l> :set cursorline!<cr>
-map <silent> <c-k><c-k> :set cursorcolumn!<cr>
+map <silent> <c-k><c-k> :set colorcolumn=80<cr>
+"map <silent> <c-k><c-k> :set cursorcolumn!<cr>
 map <silent> <c-s><c-s> :nohlsearch<cr>
 map! <silent> <c-n> <esc>:nohlsearch<cr>a
 "map <c-s> :update<cr>
