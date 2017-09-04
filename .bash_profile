@@ -139,7 +139,6 @@ if [ -n "$PS1" ]; then
     # tools
 
     alias V='vim -R -'
-    alias T='tail -F'
     alias P='ps auxwww'
     alias K='kill -9 %'
 
@@ -164,10 +163,10 @@ if [ -n "$PS1" ]; then
     fi
 
     #export __CD_HOME_PATH="${HOME}"  # override on srceen creation
-    function go() {
-        cd ${__CD_HOME_PATH}
-        echo ${PWD}
-    }
+    #function go() {
+    #    cd ${__CD_HOME_PATH}
+    #    echo ${PWD}
+    #}
 
     echo "go path: ${__CD_HOME_PATH}"
 
@@ -196,6 +195,13 @@ if [ -n "$PS1" ]; then
 
         tmux -2u attach || tmux -2u new
     }
+
+    # GO
+
+    alias GT='go test $(glide nv)'
+    alias GV='go vet -v $(glide nv)'
+
+    function GG() { grep $_grepParams "$1" $(glide nv) | grep -v "\.git" | grep "$1" ; }
 
 
 fi

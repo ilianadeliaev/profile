@@ -1,1 +1,7 @@
-alias TM='__tmux "CRM" "${HOME}/dev/rambler/cocrm/crm/"'
+export GOPATH=/Users/ilya.nadelyaev/dev/lazada/
+
+alias V1='ssh -A inadelyaev@agri1.mskdc.lzd.co'
+alias V2='ssh -A inadelyaev@agri2.mskdc.lzd.co'
+alias V3='ssh -A inadelyaev@agri3.mskdc.lzd.co'
+
+alias H='ssh -A inadelyaev@modc-srv-01026.lzd.io'

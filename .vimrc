@@ -102,14 +102,14 @@ map! <m-home> <esc>:bprevious<cr>a
 map! <m-end> <esc>:bnext<cr>a
 
 " =============== plugins =================== "
-map <silent> <f8> :JSHint<cr>
-map! <silent> <f8> <esc>:JSHint<cr>
-map <silent> <f10> :TagbarShowTag<cr>
-map! <silent> <f10> <esc>:TagbarShowTag<cr>a
-map <silent> <f11> :TagbarToggle<cr>
-map! <silent> <f11> <esc>:TagbarToggle<cr>a
+map <silent> <f11> :TbToggle<cr>
+map! <silent> <f11> <esc>:TbToggle<cr>a
 map <silent> <f12> :NERDTreeToggle<cr>
 map! <silent> <f12> <esc>:NERDTreeToggle<cr>
+"map <silent> <f8> :JSHint<cr>
+"map! <silent> <f8> <esc>:JSHint<cr>
+"map <silent> <f10> :TagbarShowTag<cr>
+"map! <silent> <f10> <esc>:TagbarShowTag<cr>a
 
 " =============== interface ================= "
 map <silent> <c-n><c-n> :set invnumber<cr>
@@ -280,7 +280,7 @@ let g:NERDTreeWinSize = 40
 "let g:NERDTreeIgnore=['\.pyc$']
 
 " =============== tabbar ================ "
-let g:Tb_MoreThanOne = 0
+let g:pb_MoreThanOne = 0
 let g:Tb_ForceDisplay = 1
 let g:Tb_SplitBelow = 0
 
