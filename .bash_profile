@@ -66,7 +66,7 @@ if [ -n "$PS1" ]; then
     else
         PS_PREFIX="\[\033[0;36m\]${TMUX_PANE}\[\033[0m\] "
     fi
-    echo '${PS_PREFIX}';
+    #echo "${PS_PREFIX}";
 
     PS_CURRENT_TIME="\[\033[0;36m\][\T]\[\033[0m\]"
     PS_HOST_NAME="\[\033[0;36m\]\h\[\033[0m\]"
