@@ -1,4 +1,0 @@
-# SSH
-alias jD="ssh -A nadelyaev@nadelyaev.dev.crm.rambler-co.ru"
-alias jS="ssh -A nadelyaev@stage.crm.rambler-co.ru"
-alias jR="ssh -A nadelyaev@repo.crm.rambler-co.ru"

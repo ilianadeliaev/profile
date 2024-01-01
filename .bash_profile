@@ -87,7 +87,7 @@ if [ -n "$PS1" ]; then
 
     #ssh-agent /usr/local/bin/bash
     #ssh-add ~/.ssh/id_dsa
-    ssh-add -l
+    #ssh-add -l
     #SSH Keychain
     #/usr/local/bin/keychain -q --ignore-missing --nocolor ~/.ssh/id_dsa 2>/dev/null
     #. ~/.keychain/$HOSTNAME-sh
@@ -154,13 +154,13 @@ if [ -n "$PS1" ]; then
 
     # tmux
 
-    alias fix_ssh_agent="source ~/.local/bin/_fix_ssh_agent"
+    #alias fix_ssh_agent="source ~/.local/bin/_fix_ssh_agent"
 
-    if [[ -z "${TMUX_PANE}" ]]; then
-        echo
-    else
-        fix_ssh_agent
-    fi
+    #if [[ -z "${TMUX_PANE}" ]]; then
+    #    echo
+    #else
+    #    fix_ssh_agent
+    #fi
 
     #export __CD_HOME_PATH="${HOME}"  # override on srceen creation
     #function go() {
@@ -168,40 +168,40 @@ if [ -n "$PS1" ]; then
     #    echo ${PWD}
     #}
 
-    echo "go path: ${__CD_HOME_PATH}"
+    #echo "go path: ${__CD_HOME_PATH}"
 
-    function __tmux() {
-        __NAME=$1
-        __HOME_PATH=$2
-        if [ -z ${__NAME} ]; then
-            __NAME="default"
-        fi
-        if [ -z ${__HOME_PATH} ]; then
-            __HOME_PATH="${HOME}"
-        fi
-        echo "tmux name: ${__NAME}"
-        echo "go path: ${__HOME_PATH}"
+    #function __tmux() {
+    #    __NAME=$1
+    #    __HOME_PATH=$2
+    #    if [ -z ${__NAME} ]; then
+    #        __NAME="default"
+    #    fi
+    #    if [ -z ${__HOME_PATH} ]; then
+    #        __HOME_PATH="${HOME}"
+    #    fi
+    #    echo "tmux name: ${__NAME}"
+    #    echo "go path: ${__HOME_PATH}"
 
-        export __TMUX_NAME=${__NAME}
-        unset __NAME
+    #    export __TMUX_NAME=${__NAME}
+    #    unset __NAME
 
-        unset __CD_HOME_PATH
-        export __CD_HOME_PATH="${__HOME_PATH}"
-        unset __HOME_PATH
+    #    unset __CD_HOME_PATH
+    #    export __CD_HOME_PATH="${__HOME_PATH}"
+    #    unset __HOME_PATH
 
-        cd
+    #    cd
 
-        ~/.local/bin/grab_ssh_agent
+    #    ~/.local/bin/grab_ssh_agent
 
-        tmux -2u attach || tmux -2u new
-    }
+    #    tmux -2u attach || tmux -2u new
+    #}
 
     # GO
 
-    alias GT='go test $(glide nv)'
-    alias GV='go vet -v $(glide nv)'
+    #alias GT='go test $(glide nv)'
+    #alias GV='go vet -v $(glide nv)'
 
-    function GG() { grep $_grepParams "$1" $(glide nv) | grep -v "\.git" | grep "$1" ; }
+    #function GG() { grep $_grepParams "$1" $(glide nv) | grep -v "\.git" | grep "$1" ; }
 
 
 fi
